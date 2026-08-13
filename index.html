@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Freelancer Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <span>F</span>
+                Freelancer
+            </div>
+
+            <nav>
+                <a href="#" class="active">🏠 Dashboard</a>
+                <a href="#">👥 Clients</a>
+                <a href="#">📁 Projects</a>
+                <a href="#">✓ Tasks</a>
+                <a href="#">📊 Statistics</a>
+                <a href="#">🧾 Invoices</a>
+                <a href="#">💼 Portfolio</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="#">⚙️ Settings</a>
+                <a href="#">🚪 Logout</a>
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main">
+
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back, Freelancer 👋</p>
+                </div>
+
+                <div class="profile">
+                    <div class="avatar">A</div>
+                    <div>
+                        <strong>Abel</strong>
+                        <small>Freelancer</small>
+                    </div>
+                </div>
+            </header>
+
+
+            <!-- Statistics Cards -->
+            <section class="stats">
+
+                <div class="card">
+                    <div class="card-icon">👥</div>
+                    <p>Total Clients</p>
+                    <h2>24</h2>
+                    <span class="positive">+12% this month</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📁</div>
+                    <p>Active Projects</p>
+                    <h2>12</h2>
+                    <span class="positive">+8% this month</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💰</div>
+                    <p>Monthly Income</p>
+                    <h2>$3,240</h2>
+                    <span class="positive">+18% this month</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">✓</div>
+                    <p>Completed Tasks</p>
+                    <h2>86</h2>
+                    <span class="positive">+24% this month</span>
+                </div>
+
+            </section>
+
+
+            <!-- Chart + Projects -->
+            <section class="content-grid">
+
+                <div class="panel chart-panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <h2>Income Overview</h2>
+                            <p>Monthly income statistics</p>
+                        </div>
+
+                        <select>
+                            <option>2026</option>
+                            <option>2025</option>
+                        </select>
+                    </div>
+
+                    <canvas id="incomeChart"></canvas>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <h2>Projects</h2>
+                            <p>Current projects</p>
+                        </div>
+
+                        <button>View All</button>
+                    </div>
+
+                    <div class="project">
+
+                        <div class="project-info">
+                            <strong>E-commerce Website</strong>
+                            <small>Client: John Doe</small>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-top">
+                                <span>80%</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div style="width:80%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="project">
+
+                        <div class="project-info">
+                            <strong>Real Estate Website</strong>
+                            <small>Client: Sarah</small>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-top">
+                                <span>60%</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div style="width:60%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="project">
+
+                        <div class="project-info">
+                            <strong>Restaurant Website</strong>
+                            <small>Client: Michael</small>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-top">
+                                <span>35%</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div style="width:35%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Recent Tasks -->
+            <section class="panel tasks-panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Recent Tasks</h2>
+                        <p>Your latest work</p>
+                    </div>
+
+                    <button>+ Add Task</button>
+                </div>
+
+                <div class="task-row">
+                    <div>
+                        <strong>Design homepage</strong>
+                        <small>E-commerce Website</small>
+                    </div>
+
+                    <span class="status completed">Completed</span>
+                </div>
+
+                <div class="task-row">
+                    <div>
+                        <strong>Build contact page</strong>
+                        <small>Real Estate Website</small>
+                    </div>
+
+                    <span class="status progress-status">In Progress</span>
+                </div>
+
+                <div class="task-row">
+                    <div>
+                        <strong>Payment integration</strong>
+                        <small>Restaurant Website</small>
+                    </div>
+
+                    <span class="status pending">Pending</span>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
